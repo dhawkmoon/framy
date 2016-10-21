@@ -1,0 +1,43 @@
+/*
+ * Default color scheme
+ */
+
+$colors: (
+	main: $main-color,
+	alt: $alt-color,
+	danger: $danger-color,
+	warning: $warning-color
+);
+@each $color, $code in $colors{
+	[class*="--#{$color}-color-txt"]{
+		color: $code;
+	}
+	[class*="--#{$color}-color-bg"]{
+		background-color: $code;
+	}
+	[class*="--#{$color}-color-br"]{
+		border-color: $code;
+	}
+	.btn--#{$color}-color-bg{
+		border-bottom-color: darken( $code, 10% );
+	}
+	.btn--#{$color}-color-bg:not(.btn-o):active{
+		background-color: lighten( $code, 10% );
+		border-bottom-color: lighten( $code, 10% );
+	}
+	.btn-o.btn--#{$color}-color-br{
+		border-color: $code;
+		color: $code;
+	}
+	.btn-o.btn--#{$color}-color-br:hover{
+		background-color: $code;
+	}
+	.btn--#{$color}-color-bg:not(.btn-o):active{
+		background-color: lighten( $code, 10% );
+		border-bottom-color: lighten( $code, 10% );
+	}
+}
+
+
+
+

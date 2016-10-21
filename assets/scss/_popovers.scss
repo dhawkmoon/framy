@@ -1,0 +1,104 @@
+/*
+ * Popover
+ */
+[data-framy="popover"]{
+	position: relative;
+	cursor: help;
+}
+[data-framy="popover"]:after{
+	content:attr(data-content);
+	position: absolute;
+	width: 150px;
+	background: silver;
+	font-size: 14px;
+	line-height: 1;
+	padding: 8px;
+	display: none;
+	border-radius:2px;
+	color:black;
+	cursor:default;	
+	box-shadow:1px 1px 1px rgba(0, 0, 0, .4);
+	-webkit-box-shadow:1px 1px 1px rgba(0, 0, 0, .4);
+}
+
+[data-framy="popover"][data-position="bottom"]:after{
+	display: none;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	@include translateY( calc(100% + 15px) );
+}
+[data-framy="popover"][data-position="bottom"]:before{
+	content: '';
+	position: absolute;
+	display: none;
+	width: 0;
+	bottom:-15px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	border:8px solid silver;
+	border-top-color:transparent;
+	border-left-color:transparent;
+	border-right-color: transparent;	
+}
+
+[data-framy="popover"][data-position="right"]:after{
+	display: none;
+	right: 0;
+	top:0;
+	@include translateY( calc(100% + 15px) );
+}
+[data-framy="popover"][data-position="right"]:before{
+	content: '';
+	position: absolute;
+	display: none;
+	right:-15px;
+	top:1px;
+	border:8px solid silver;
+	border-top-color:transparent;
+	border-left-color:transparent;
+	border-bottom-color: transparent;	
+}
+
+[data-framy="popover"][data-position="top"]:after{
+	display: none;
+	left: 0;
+	right: 0;
+	top:0;
+	margin-left: auto;
+	margin-right: auto;
+	@include translateY( calc(-100% - 15px) );
+}
+[data-framy="popover"][data-position="top"]:before{
+	content: '';
+	position: absolute;
+	display: none;
+	width: 0;
+	top:-15px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	border:8px solid silver;
+	border-right-color:transparent;
+	border-left-color:transparent;
+	border-bottom-color: transparent;
+	z-index: 1;
+}
+
+[data-framy="popover"]:before,
+[data-framy="popover"]:after
+{
+	animation-name: fadeIn;
+	animation-duration: .4s;
+}
+[data-framy="popover"]:hover:after{
+	display: inline-table;
+}
+[data-framy="popover"]:hover:before{
+	display: block;
+}

@@ -1,0 +1,35 @@
+/*
+ * Cards
+ */
+.card-header,
+.card-body,
+.card-footer
+{
+	padding: 15px;
+	border: 1px solid #ddd;
+	box-shadow: 1px 1px 2px #fafafa;
+	background-color: #fff;
+}
+.card-body,
+.card-footer{
+	border-top:none;
+}
+.card-header{
+	margin-top: 15px;
+	border-radius: 5px 5px 0 0;
+}
+.card-footer{
+	margin-bottom: 15px;
+	border-radius: 0 0 5px 5px;
+}
+.card-footer--main-color-bg,
+.card-header--main-color-bg,
+.card-body--main-color-bg{
+	color:white;
+}
+/*
+[class^="col-"] > [class^="card-"]{
+	margin-left:-15px;
+	margin-right: -15px;
+}
+*/

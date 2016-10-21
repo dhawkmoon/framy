@@ -1,0 +1,78 @@
+/*
+ * Modals
+ */
+
+.modal-overlay{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 9999;
+	@include animation(fadeIn, .3s);	
+	background-color: rgba(0, 0, 0, .6);
+	display: none;
+}
+.modal-wrapper{
+	position: fixed;
+	left:0;
+	top:10%;
+	right: 0;
+	margin: auto;
+	width: 600px;
+	min-height: 150px;
+	background-color: #fafafa;
+	box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+	@include animation(fadeIn, .3s);
+	z-index: 99999;
+	display: none;
+}
+.modal-xs{
+	width: 300px;
+}
+.modal-sm{
+	width: 450px;
+}
+.modal-md{
+	width: 600px;
+}
+.modal-lg{
+	width: 900px;
+}
+.modal-header{
+	position: relative;
+	padding: 15px;
+	border-bottom: 1px solid #ddd;
+}
+.modal-header--main-color-bg .modal-title,
+.modal-header--main-color-bg .modal-closer{
+	color:white;
+}
+.modal-title{
+	margin: 0;
+}
+.modal-closer{
+	position: absolute;
+	right:15px;
+	top:15px;
+	font-size: 24px;
+	line-height: .6em;
+	cursor: pointer;
+}
+.modal-body{
+	min-height: 150px;
+	max-height: 60vh;
+	padding: 0 15px;
+	overflow-y: auto;
+}
+.modal-footer{
+	border-top: 1px solid #ddd;
+}
+.modal-overlay--opened,
+.modal--opened
+{
+	display: block;
+}
+body.modal--opened{
+	overflow: hidden;
+}

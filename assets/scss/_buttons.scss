@@ -1,0 +1,60 @@
+/*
+ * Buttons
+ */
+.btn{
+	display: inline-block;
+	font:inherit;
+	font-size: 1em;
+	padding: 1em;
+	border-radius:3px;
+	background-color: $main-color;
+	color:white;
+	border:none;
+	border-bottom: 2px solid darken($main-color, 10%);
+	cursor: pointer;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-right: 15px;
+	min-width: 140px;
+	text-align: center;
+	&-xs{
+		font-size: .6em;
+	}
+	&-sm{
+		font-size: .8em;
+	}
+	&-md{
+		font-size: 1em;
+	}
+	&-lg{
+		font-size: 1.3em;
+	}
+	&--squared{
+		border-radius: 0;
+	}
+	&:not(.btn-o):active,
+	&:not(.btn-o):disabled,
+	&--disabled{
+		background-color: lighten($main-color, 10%);
+		border-bottom-color: lighten($main-color, 10%);
+		cursor: default;
+	}
+	&-o{
+		color: $main-color;
+		border:1px solid $main-color;
+		background-color: transparent;
+	}
+	&-o:not(.btn--disabled):hover{
+		color:white;
+		background-color:$main-color;
+	}
+	&-o.btn--disabled,
+	&-o:disabled{
+		border-color: #ddd;
+		color: #ddd;
+	}
+}
+
+p + .btn{
+	margin-top: 0;
+}

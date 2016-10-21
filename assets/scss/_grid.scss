@@ -1,0 +1,181 @@
+/*
+ * Grid system
+ */
+
+/*
+ * Generates grid classes, based on media queries. $prefix - device-prefix, like xs- or lg-, $cols - quantity of cols (def: 12)
+ */
+@mixin framy-generate-grid( $prefix, $cols:12 ){
+	@for $i from 1 through $cols{
+		.#{$prefix}-#{$i}{
+			width: 100% / $cols * $i;
+		}
+	}
+	@for $i from 0 through $cols{
+		.#{$prefix}--offset-#{$i}{
+			margin-left: 100% / $cols * $i;
+		}
+	}
+	.row-#{$prefix}{
+		flex-direction: row;
+	}
+	.hidden-#{$prefix}{
+		display: none;
+	}
+	.#{$prefix}--items-center{
+		align-items: center;
+	}
+	.#{$prefix}--items-start{
+		align-items: flex-start;
+	}
+	.#{$prefix}--items-end{
+		align-items: flex-end;
+	}
+	.#{$prefix}--items-stretch{
+		align-items: stretch;
+	}
+}
+
+.container{
+	padding-left:15px;
+	padding-right: 15px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.container-fluid{
+	@extend .container;
+	width: 100%;
+}
+/*
+ * None Flex Layout
+ */
+.row{
+	display:block;
+}
+.col{
+	display: block;
+	float:left;
+}
+.col{
+	//display: table-cell;
+	&--reverse{
+		flex-direction: column-reverse !important;
+	}
+}
+.row-auto{
+	display: block;
+}
+/*
+ * Flex Supports
+ */
+.row{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-left: -15px;
+	margin-right: -15px;
+	&--reverse{
+		flex-direction: row-reverse !important;
+	}
+	&--auto{
+		flex-wrap: nowrap;
+	}
+	&--full-height{
+		height: 100vh;
+	}
+}
+/*
+ * Clearfix
+ */
+.row:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+[class^="col-"],
+.col{
+	width: 100%;
+}
+[class^="col-"],
+.col{
+	padding-left:15px;
+	padding-right: 15px;
+}
+
+.items-center{
+	align-items: center;
+}
+.items-start{
+	align-items: flex-start;
+}
+.items-end{
+	align-items: flex-end;
+}
+.items-stretch{
+	align-items: stretch;
+}
+
+.self-center{
+	align-self: center;
+}
+.self-start{
+	align-self: flex-start;
+}
+.self-end{
+	align-self: flex-end;
+}
+.self-stretch{
+	align-self: stretch;
+}
+
+/*
+ * Media Queries
+ */
+@media all and (min-width: 0px){
+	
+}
+@media all and (max-width: 768px){
+	.container{
+		width: 100%;
+		max-width: 768px;
+	}
+	.row{
+		flex-direction: column;
+	}
+	@include framy-generate-grid('xs', 12);
+	
+}
+@media all and (min-width: 769px){
+	.container{
+		width: 100%;
+		max-width: 960px;
+	}
+	@include framy-generate-grid('sm', 12);
+	
+	
+}
+@media all and (min-width: 991px){
+	.container{
+		width: 100%;
+		max-width: 1024px;
+	}
+	@include framy-generate-grid('md', 12);
+}
+@media all and (min-width: 1201px){
+	.container{
+		width: 1200px;
+	}
+	@include framy-generate-grid('lg', 12);
+}
+/*
+ * Outers
+ */
+
+.outer{
+	position: relative;
+	padding-bottom: 15px;
+	padding-top: 1px;
+	&--stressed{
+		background-color: #fafafa;
+	}
+}

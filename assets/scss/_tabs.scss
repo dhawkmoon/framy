@@ -1,0 +1,66 @@
+/*
+ * Tabs
+ */
+.tabs-header{
+	ul{
+		flex-wrap: wrap;
+	}
+}
+.tabs-body{
+	position: relative;
+}
+.tabs-page{
+	display: none;
+	min-height: 150px;
+	padding: 0 8px;
+	@include animation( fadeIn, .3s);
+}
+.tabs-page--open{
+	display: block;
+}
+.tabs-header--squared,
+.tabs-header--rounded{
+	border-bottom: 1px solid #ddd;
+}
+.tabs-header--squared a,
+.tabs-header--rounded a{
+	border: 1px solid #ddd;
+	border-bottom: none;
+}
+.tabs-header--rounded a{
+	border-radius: 5px 5px 0 0;
+}
+.tabs-header--squared a:hover,
+.tabs-header--squared a:active,
+.tabs-header--squared a.tab--active,
+.tabs-header--rounded a:hover,
+.tabs-header--rounded a:active,
+.tabs-header--rounded a.tab--active,
+.tabs-header--togglered a:active,
+.tabs-header--togglered a.tab--active
+{
+	background-color: $main-color;
+	color:white;
+}
+.tabs-header--no-margin a{
+	margin:0;
+}
+.tabs-header--togglered a{
+	border: 1px solid #ddd;
+	background-color: #fafafa;
+	border-right: none;
+	padding: .3em .6em;
+	margin: 0;
+	box-shadow: 1px 1px 1px #fafafa;
+}
+.tabs-header--togglered li:first-child a{
+	border-radius: 15px 0 0 15px;
+}
+.tabs-header--togglered li:last-child a{
+	border-radius: 0 15px 15px 0;
+	border-right: 1px solid #ddd;
+}
+.tabs-header--togglered a:not(.tab--active):hover{
+	border-color:#ddd;
+	color: inherit;
+}

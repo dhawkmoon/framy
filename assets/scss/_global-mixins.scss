@@ -1,0 +1,59 @@
+/*
+ * Global Mixins - Transformations & Transitions
+ */
+
+@mixin rotate( $deg ){
+	-webkit-transform: rotate($deg);
+	-o-transform: rotate($deg);
+	-ms-transform: rotate($deg);
+	transform: rotate($deg);
+}
+
+@mixin translateX( $val ){
+	-webkit-transform: translateX($val);
+	-o-transform: translateX($val);
+	-ms-transform: translateX($val);
+	transform: translateX($val);
+}
+
+@mixin translateY( $val ){
+	-webkit-transform: translateY($val);
+	-o-transform: translateY($val);
+	-ms-transform: translateY($val);
+	transform: translateY($val);
+}
+
+@mixin translateZ( $val ){
+	-webkit-transform: translateZ($val);
+	-o-transform: translateZ($val);
+	-ms-transform: translateZ($val);
+	transform: translateZ($val);
+}
+
+@mixin transition( $val: $base-trs ){
+	-webkit-transition: $val;
+	-o-transition: $val;
+	-ms-transition: $val;
+	transition: $val;
+}
+
+@mixin animation($name, $dur){
+	animation-name: $name;
+	animation-duration: $dur;
+	-webkit-animation-name: $name;
+	-webkit-animation-duration: $dur;
+	-ms-animation-name: $name;
+	-webkit-animation-duration: $dur; 
+}
+
+/*
+ * Global Mixins - Flex Layout
+ */
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}

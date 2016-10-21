@@ -1,0 +1,247 @@
+/*
+ * Forms - togglers
+ */
+input[type="checkbox"].checkbox-toggler{
+	display: none;
+}
+input[type="checkbox"].checkbox-toggler + label{
+	display: inline-block;
+	position: relative;
+	width: calc(4em - 4px);
+	height: 2em;
+	margin-bottom: 15px;
+	border-radius: 1em;
+	border: 1px solid #ddd;
+	background-color: #ddd;
+	cursor: pointer;
+	transition: .3s linear;
+	background-color: #fafafa;
+}
+input[type="checkbox"].checkbox-toggler + label:after{
+	content: '';
+	display: block;
+	position: absolute;
+	width: calc(2em - 4px);
+	height: calc(2em - 4px);
+	top:1px;
+	left:1px;
+	border-radius: 50%;
+	-webkit-transition: .3s linear;
+	-o-transition: .3s linear;
+	transition: .3s linear;
+	background-color: white;
+    box-shadow: 1px 1px 2px silver;
+}
+input[type="checkbox"].checkbox-toggler.checkbox-toggler--colored + label{
+	background-color: #ad0c0c;
+}
+input[type="checkbox"].checkbox-toggler:checked + label{
+	background-color:  $main-color;
+}
+input[type="checkbox"].checkbox-toggler:checked + label:after{
+	transform: translateX(100%);
+	-webkit-transform: translateX(100%);
+}
+
+input[type="checkbox"].checkbox-toggler.checkbox-toggler--squared + label{
+	border-radius: 0;
+}
+input[type="checkbox"].checkbox-toggler.checkbox-toggler--squared + label:after{
+	content: '=';
+	text-align: center;
+	color:#ddd;
+	border-radius: 0;
+	line-height: 1.7em;
+}
+input[type="checkbox"].checkbox-toggler:disabled + label{
+	cursor: default;
+}
+input[type="checkbox"].checkbox-toggler:disabled + label:after{
+	background-color: transparent;
+}
+/*
+ * Forms - checkboxes
+ */
+.checkbox{
+	display: none;
+}
+.checkbox + label{
+	position: relative;
+	cursor: pointer;
+	padding-left: 1.4em;
+}
+.checkbox + label:before{
+	content: '';
+	display: inline-block;
+	position: absolute;
+	left:0;
+	top:.2em;
+	margin-right: .7em;
+	width: .7em;
+	height: .7em;
+	border:1px solid #ddd;
+	background-color: #fafafa;
+}
+.checkbox:checked + label:after{
+content: '';
+    display: inline-block;
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    margin-left: 2px;
+    margin-top: 2px;
+    width: calc(1em - 2px);
+    height: calc(.6em - 2px);
+    border: .24em solid $main-color;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-35deg);
+}
+.checkbox.checkbox--squared:checked + label:after{
+	content: '';
+	display: inline-block;
+	position: absolute;
+	box-sizing: border-box;
+	top:.2em;
+	left:0;
+	margin-left: 2px;
+	margin-top: 2px;
+	width: calc(.7em - 2px);
+	height: calc(.7em - 2px);
+	background-color: $main-color;
+	transform: none;
+}
+/*
+ * Forms - radio buttons
+ */
+.radio{
+	display: none;
+}
+.radio + label{
+	position: relative;
+	cursor: pointer;
+	padding-left: 1.4em;
+}
+.radio + label:before{
+	content: '';
+	display: inline-block;
+	position: absolute;
+	left:0;
+	top:.2em;
+	margin-right: .7em;
+	width: .7em;
+	height: .7em;
+	border:1px solid #ddd;
+	border-radius: 50%;
+	background-color: #fafafa;
+}
+.radio:checked + label:after{
+	content: '';
+	display: inline-block;
+	position: absolute;
+	box-sizing: border-box;
+	top:.2em;
+	left:0;
+	margin-left: 2px;
+	margin-top: 2px;
+	width: calc(.7em - 2px);
+	height: calc(.7em - 2px);
+	background-color: $main-color;
+	transform: none;
+	border-radius: 50%;
+}
+.radio-toggler-wrapper{
+	display: inline-flex;
+	flex-wrap: wrap;
+}
+.radio-toggler{
+	display: none;
+}
+.radio-toggler + label{
+	display: inline-block;
+	padding: .2em .5em;
+	border:1px solid #ddd;
+	border-right-color:transparent;
+	cursor: pointer;
+	background-color: #fafafa;
+	box-shadow: 1px 1px 1px #fafafa;
+}
+.radio-toggler + label:nth-child(2){
+	border-right: none;
+	border-radius: .75em 0 0 .75em;
+}
+.radio-toggler + label:last-child{
+	border-right-color: #ddd;
+	border-radius: 0 .75em .75em 0;
+}
+.radio-toggler:checked + label{
+	background-color: $main-color;
+	color:white;
+	border-color: $main-color;
+}
+.radio-toggler:disabled + label{
+	color:#ddd;
+	cursor: default;
+}
+@media all and (max-width: 768px){
+	.radio-toggler + label{
+		font-size: .7em;
+	}
+}
+/*
+ * Forms - textfields
+ */
+.textfield{
+	display: block;
+	width:100%;
+	border:1px solid #ddd;
+	padding: 8px;
+	font-size: 1em;
+	outline: none;
+	margin-bottom: 15px;
+	height: 40px;
+}
+label + .textfield{
+	margin-top: 15px;
+}
+.textfield--inline{
+	display: inline-block;
+	width: auto;
+	margin-left: 15px;
+	vertical-align: top;
+}
+.textfield--success{
+	border-color:$main-color;
+	background-color: #e4f6ee;
+}
+.textfield--error{
+	border-color: #ad0c0c;
+    background-color: #f6e4e4;
+}
+.textfield-xs{
+	font-size: .6em;
+	padding: 4px;
+}
+.textfield-sm{
+	font-size: .8em;
+	padding: 6px;
+}
+.textfield-lg{
+	font-size: 1.2em;
+	padding: 8px;
+}
+.textfield--inline + .btn{
+	
+}
+/*
+ * Forms submit's
+ */
+.submit{
+	height:40px;
+	background-color: $main-color;
+	border:none;
+	vertical-align: top;
+	cursor: pointer;
+	outline: none;
+}

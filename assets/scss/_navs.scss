@@ -1,0 +1,97 @@
+/*
+ * Navs
+ */
+.nav > ul{
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	margin-top: 15px;
+	margin-bottom: 0;
+}
+.nav li{
+	position: relative;
+}
+.nav > ul > li > a{
+	display: block;
+	padding: 8px 12px;
+	border-bottom: 2px solid #ddd;
+	margin: 0 5px;
+	font-size: .9em;
+	text-decoration: none;
+	color: black;
+}
+.nav > ul > li > a:hover,
+.nav > ul > li > a:active,
+.nav > ul > li > a.tab--active{
+	color:#0cad62;
+	border-color:#0cad62; 
+}
+
+.nav--center ul{
+	justify-content: center;
+}
+.nav--start ul{
+	justify-content: flex-start;
+}
+.nav--end ul{
+	justify-content: flex-end;
+}
+.nav--filled a{
+	background-color: #fafafa;
+}
+.nav > ul ul{
+	position: absolute;
+	left: 8px;
+	list-style: none;
+	padding: 0;
+	min-width: 170px;
+	background-color: #fff;
+	box-shadow: 1px 1px 2px silver;
+	display: none;
+}
+.nav > ul ul a{
+	display: block;
+	font-size: .9em;
+	padding: .6em 1.2em;
+	animation-name: fadeIn;
+	-webkit-animation-name: fadeIn;
+	animation-duration: .3s;
+	-webkit-animation-duration: .3s;
+	text-decoration: none;
+	color: black; 
+}
+.nav > ul ul a:hover{
+	background-color: #0cad62;
+	color:white;
+}
+.nav li:hover > ul{
+	display: block;
+}
+.nav ul ul > li > ul{
+	left: 100%;
+    top: 0;
+}
+.nav li.has-children>a:after{
+	content: '';
+	position: relative;
+	display: inline-block;
+	width: .4em;
+	height: .4em;
+	border:1px solid #0cad62;
+	margin-left: 1em;
+	top: -0.3em;
+	background-color: transparent;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	border-left-color: transparent;
+	border-top-color: transparent;
+	-webkit-transition: .3s linear;
+	-o-transition: .3s linear;
+	transition: .3s linear;	
+}
+.nav li.has-children:hover>a:after{
+	top:0;
+	transform: rotate(225deg);
+	-webkit-transform: rotate(225deg);
+}
