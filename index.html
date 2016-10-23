@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Framy test</title>
+		<meta name="viewport" content="width=device-width">
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/framy-parallax.js"></script>
+		<script src="assets/js/framy-tabs.js"></script>
+		<script src="assets/js/framy.js"></script>
+<!-- 		<link rel="stylesheet" href="assets/css/font-awesome.min.css"> -->
+		<link rel="stylesheet" href="assets/css/framy.css">
+	</head>
+	<body>
+<!-- 		<a href="#" data-framy="popover" data-title="Test" data-content="This is test, beach!" data-position="right">Test me!</a> -->
+	<div class="outer outer--stressed">
+		<div class="container">
+			<div class="row">
+				<div class="col md-12 text-center">
+					<h1>Framy</h1>
+					<span class="sub-heading --main-color-txt">CSS 3 Framework</span>
+				</div>
+			
+			
+				<nav class="col-xs-12 nav nav--center hidden-xs">
+					<ul>
+						<li><a href="#prologue">Введение</a></li>
+						<li><a href="#coding">Верстка</a></li>
+						<li><a href="#grid">Сетка</a></li>
+						<li class="has-children"><a href="#">Элементы</a>
+							<ul>
+								<li><a href="#cards">Карточки</a></li>
+								<li>
+									<a href="#modals">Модали</a>
+									<ul>
+										<li><a href="#">Test</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#">Типографика</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+		<div id="prologue" class="container">
+			<div class="row">
+				<div class="col md-6 text-justify">
+					<h2>Введение</h2>
+					<p>Привет! Меня зовут <span class="--main-color-txt">Framy!</span> Я новый, легкий Framework на CSS 3, который создан для облегчения жизни верстальщиков и вебмастеров.</p>
+					<p>Мои преимущества:</p>
+					<ul class="list--arrowed list--colored">
+						<li>Легкость</li>
+						<li>Современность</li>
+						<li>Простота</li>
+						<li>Адаптивность</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+			<div id="coding" class="outer outer--stressed">
+				<div class="container">
+					<div class="row">
+						<div class="col md-6 md--offset-3">
+							<h2>Выразительная верстка</h2>
+							<p>Выразительность - очень важное и современное условие, к которому стремятся программисты. Верстка тоже может быть вполне выразительной!</p>
+							<p>Чтобы добиться этого мы решили следовать следующим правилам:</p>
+							<ul class="list--arrowed list--colored">
+								<li>Использование модели БЭМ в наименованиях</li>
+								<li>Максимальная адаптация имен под распространенные Framework'и (Bootstrap)</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="outer" id="grid">
+			<div class="container">
+				<div class="row">
+					<div class="col md-12">
+						<h2>Сетка</h2>
+						<h3>Стандартная сетка</h3>
+						<pre>.row > .col md-12 ...</pre>
+						<p>Framy предоставляет адаптивную сетку, состоящую из 12 колонок (самый распространенный стандарт). При это, данная система по умолчанию работает на flexbox'е, однако, если браузер не поддерживает flexbox, сетка деградирует до классической блочной верстки с использованием float:</p>
+						
+						<div class="row row--example">
+							<div class="col md-12 --alt-color-bg text-center">
+								col md-12
+							</div>
+						</div>
+						<div class="row row--example">
+							<div class="col md-6 --alt-color-bg text-center">col md-6</div>
+							<div class="col md-6 --alt-color-bg text-center">col md-6</div>
+						</div>
+						<div class="row row--example">
+							<div class="col md-5 --alt-color-bg text-center">col md-5</div>
+							<div class="col md-5 --alt-color-bg text-center">col md-5</div>
+							<div class="col md-2 --alt-color-bg text-center">col md-2</div>
+						</div>
+						<div class="row row--example">
+							<div class="col md-4 --alt-color-bg text-center">col md-4</div>
+							<div class="col md-4 --alt-color-bg text-center">col md-4</div>
+							<div class="col md-4 --alt-color-bg text-center">col md-4</div>
+						</div>
+						<div class="row row--example">
+							<div class="col md-3 --alt-color-bg text-center">col md-3</div>
+							<div class="col md-3 --alt-color-bg text-center">col md-3</div>
+							<div class="col md-3 --alt-color-bg text-center">col md-3</div>
+							<div class="col md-3 --alt-color-bg text-center">col md-3</div>
+						</div>
+						<div class="row row--example">
+							<div class="col md-2 --alt-color-bg text-center">col md-2</div>
+							<div class="col md-2 --alt-color-bg text-center">col md-2</div>
+							<div class="col md-2 --alt-color-bg text-center">col md-2</div>
+							<div class="col md-2 --alt-color-bg text-center">col md-2</div>
+							<div class="col md-2 --alt-color-bg text-center">col md-2</div>
+							<div class="col md-2 --alt-color-bg text-center">col md-2</div>
+						</div>
+						<div class="row row--example">
+							<div class="col md-1 --alt-color-bg text-center">col md-1</div>
+							<div class="col md-1 --alt-color-bg text-center">col md-1</div>
+							<div class="col md-1 --alt-color-bg text-center">col md-1</div>
+							<div class="col md-1 --alt-color-bg text-center">col md-1</div>
+							<div class="col md-1 --alt-color-bg text-center">col md-1</div>
+							<div class="col md-1 --alt-color-bg text-center">col md-1</div>
+							<div class="col md-1 --alt-color-bg text-center">col md-1</div>
+							<div class="col md-1 --alt-color-bg text-center">col md-1</div>
+							<div class="col md-1 --alt-color-bg text-center">col md-1</div>
+							<div class="col md-1 --alt-color-bg text-center">col md-1</div>
+							<div class="col md-1 --alt-color-bg text-center">col md-1</div>
+							<div class="col md-1 --alt-color-bg text-center">col md-1</div>
+						</div>
+						<h3>Автоматическая сетка</h3>
+						<p>Автоматическая сетка представляет собой гибкую сетку на основе flexbox, которая автоматически определяет ширину колонок и их смещения по заданному алгоритму:</p>
+						<pre>.row--auto > .col ...</pre>
+						<p>По умолчанию колонки стремятся заполнить все пространство, оставаясь при этом равными по ширине:</p>
+						<div class="row row--example row--auto">
+							<div class="col --alt-color-bg text-center">col</div>
+						</div>
+						<div class="row row--example row--auto">
+								<div class="col --alt-color-bg text-center">col</div>
+								<div class="col --alt-color-bg text-center">col</div>
+							</div>
+						<div class="row row--example row--auto">
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+						</div>
+						<div class="row row--example row--auto">
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+						</div>
+						<div class="row row--example row--auto">
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+						</div>
+						<div class="row row--example row--auto">
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+						</div>
+						<div class="row row--example row--auto">
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+						</div>
+						<div class="row row--example row--auto">
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+						</div>
+						<div class="row row--example row--auto">
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+							<div class="col --alt-color-bg text-center">col</div>
+						</div>
+						<div class="row row--example row--auto">
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+					</div>
+					<div class="row row--example row--auto">
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+					</div>
+					<div class="row row--example row--auto">
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+						<div class="col --alt-color-bg text-center">col</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="cards" class="outer">
+			<div class="container">	
+				<div class="row">
+					<div class="col md-12">
+						<h2 class="text-center">Карточки</h2>
+					</div>
+					
+				</div>
+				<div class="row xs-items-center">
+					<div class="col-xs-8 col md-3">
+						<div class="card-header cart-header--main-color-txt ">Карта 1</div>
+						<div class="card-body">Приветствуем! Это пример карты. Тут может быть что угодно!</div>
+						<div class="card-footer card-footer--main-color-bg">Вот так вот</div>
+					</div>
+					<div class="col-xs-8 col md-3">
+						<div class="card-header card-header--main-color-bg --main-color-br">Карта 2</div>
+						<div class="card-body card-body--alt-color-bg --main-color-br">Приветствуем! Это пример карты. Тут может быть что угодно!</div>
+						<div class="card-footer card-footer--main-color-bg --main-color-br">Вот так вот</div>
+					</div>
+					<div class="col-xs-8 col md-3">
+						<div class="card-header --main-color-br">Карта 3</div>
+						<div class="card-body --main-color-br">Приветствуем! Это пример карты. Тут может быть что угодно!</div>
+						<div class="card-footer card-footer--main-color-bg --main-color-br">Вот так вот</div>
+					</div>
+					<div class="col-xs-8 col md-3">
+						<div class="card-header --main-color-br">Карта 3</div>
+						<div class="card-body --main-color-br">Приветствуем! Это пример карты. Тут может быть что угодно!</div>
+						<div class="card-footer card-footer--main-color-txt --main-color-br">Вот так вот</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="outer outer--stressed">
+			<div class="container">
+				<div class="row">
+					<div class="col md-12">
+						<h2>Модали</h2>
+						<span class="sub-heading --main-color-txt">... и попапы</span>
+						<p>Модали - всплывающие окна, которые используются для ведения диалога с пользователем, либо для выдачи предупреждений или опевещений.</p>
+						<p>Как правило, модали всплывают при определенном действии, например, при нажатии на кнопку:</p>
+							
+						<span data-framy="modal" data-target="#testModal" class="btn">Нажми меня!</span>
+						
+					</div>
+					<div class="col md-3">
+						<h3>Модификаторы размеров</h3>
+						<pre>.modal-xs</pre>
+						<span data-framy="modal" data-target="#testModalXS" class="btn">.modal-xs</span>
+					</div>
+					<div class="col md-3 self-end">
+						<pre>.modal-sm</pre>
+						<span data-framy="modal" data-target="#testModalSM" class="btn">.modal-sm</span>
+					</div>
+					<div class="col md-3 self-end">
+						<pre>.modal-md</pre>
+						<span data-framy="modal" data-target="#testModalMD" class="btn">.modal-md</span>
+					</div>
+					<div class="col md-3 self-end">
+						<pre>.modal-lg</pre>
+						<span data-framy="modal" data-target="#testModalLG" class="btn">.modal-lg</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col md-12"></div>
+				</div>
+			</div>
+		</div>
+		<div class="outer">
+			<div class="container">
+				<div class="row">
+					<div class="col md-12">
+						<h2 class="text-center">Таблицы</h2>
+						<p>Таблиц по умолчанию растягиваются на всю ширину родительского элемента, имеют фиксированную ширину колонок, а также склеивают соседние границы:</p>
+						<table class="table">
+							<caption>Таблица 1 "Пример таблицы"</caption>
+							<tr>
+								<th>ergerr</th>
+								<th>brbrebr</th>
+								<th>breberb</th>
+							</tr>
+							<tr>
+								<td>brberb</td>
+								<td>berberberb</td>
+								<td>berber</td>
+							</tr>
+							<tr>
+								<td>breberbr</td>
+								<td>berbb</td>
+								<td>berbre</td>
+							</tr>
+							<tr>
+								<td>berbb</td>
+								<td>bebre</td>
+								<td>brebrerebre</td>
+							</tr>
+						</table>
+						<p>При этом шапка таблицы выделена цветом и жиром.</p>
+						<p>К таблицам может применяться ряд классов-модификаторов, которые отвечают за стиль отображения конкретных элементов. К примеру, при помощи модификатора <pre data-framy="popover" data-content="Добавляет задний фон четным рядам таблицы" data-position="top">.table--striped</pre> и <pre>.table--no-frame</pre> мы можем получить следующий результат:</p>
+						<table class="table table--striped table--no-frame">
+							<caption>Таблица 2 "Пример таблицы"</caption>
+							<tr>
+								<th>ergerr</th>
+								<th>brbrebr</th>
+								<th>breberb</th>
+							</tr>
+							<tr>
+								<td>brberb</td>
+								<td>berberberb</td>
+								<td>berber</td>
+							</tr>
+							<tr>
+								<td>breberbr</td>
+								<td>berbb</td>
+								<td>berbre</td>
+							</tr>
+							<tr>
+								<td>berbb</td>
+								<td>bebre</td>
+								<td>brebrerebre</td>
+							</tr>
+							<tr>
+								<td>berbb</td>
+								<td>bebre</td>
+								<td>brebrerebre</td>
+							</tr>
+							<tr>
+								<td>berbb</td>
+								<td>bebre</td>
+								<td>brebrerebre</td>
+							</tr>
+						</table>
+						<table class="table table--striped table--colored">
+							<caption>Таблица 3 "Пример таблицы"</caption>
+							<tr>
+								<th>ergerr</th>
+								<th>brbrebr</th>
+								<th>breberb</th>
+							</tr>
+							<tr>
+								<td>brberb</td>
+								<td>berberberb</td>
+								<td>berber</td>
+							</tr>
+							<tr>
+								<td>breberbr</td>
+								<td>berbb</td>
+								<td>berbre</td>
+							</tr>
+							<tr>
+								<td>berbb</td>
+								<td>bebre</td>
+								<td>brebrerebre</td>
+							</tr>
+							<tr>
+								<td>berbb</td>
+								<td>bebre</td>
+								<td>brebrerebre</td>
+							</tr>
+							<tr>
+								<td>berbb</td>
+								<td>bebre</td>
+								<td>brebrerebre</td>
+							</tr>
+						</table>
+						<table class="table table--striped table--colored table--no-border">
+							<caption>Таблица 4 "Пример таблицы"</caption>
+							<tr>
+								<th>ergerr</th>
+								<th>brbrebr</th>
+								<th>breberb</th>
+							</tr>
+							<tr>
+								<td>brberb</td>
+								<td>berberberb</td>
+								<td>berber</td>
+							</tr>
+							<tr>
+								<td>breberbr</td>
+								<td>berbb</td>
+								<td>berbre</td>
+							</tr>
+							<tr>
+								<td>berbb</td>
+								<td>bebre</td>
+								<td>brebrerebre</td>
+							</tr>
+							<tr>
+								<td>berbb</td>
+								<td>bebre</td>
+								<td>brebrerebre</td>
+							</tr>
+							<tr>
+								<td>berbb</td>
+								<td>bebre</td>
+								<td>brebrerebre</td>
+							</tr>
+						</table>
+						<table class="table table--border-bottom">
+							<caption>Таблица 5 "Пример таблицы"</caption>
+							<tr>
+								<th>ergerr</th>
+								<th>brbrebr</th>
+								<th>breberb</th>
+							</tr>
+							<tr>
+								<td>brberb</td>
+								<td>berberberb</td>
+								<td>berber</td>
+							</tr>
+							<tr>
+								<td>breberbr</td>
+								<td>berbb</td>
+								<td>berbre</td>
+							</tr>
+							<tr>
+								<td>berbb</td>
+								<td>bebre</td>
+								<td>brebrerebre</td>
+							</tr>
+							<tr>
+								<td>berbb</td>
+								<td>bebre</td>
+								<td>brebrerebre</td>
+							</tr>
+							<tr>
+								<td>berbb</td>
+								<td>bebre</td>
+								<td>brebrerebre</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- PARALLAX -->
+		<div class="outer parallax parallax--full-screen sky-scene">
+			<div class="parallax__layer parallax__layer--base">
+				<div class="container">
+					<div class="row row--full-height items-center">
+						<div class="col md-6 md--offset-3">
+							<h2>Параллакс на (почти) чистом CSS</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="parallax__layer parallax__layer--back">
+				<div class="container-fluid">
+					<div class="row row--full-height items-start">
+						<div class="col md-3 md--offset-2">
+								<span class="cloud cloud--extra-light"></span>
+						</div>
+						<div class="col md-4 md--offset-8">
+								<span class="cloud cloud--extra-light"></span>
+						</div>
+						<div class="col md-3 md--offset-9">
+								<span class="cloud cloud--extra-light"></span>
+						</div>
+						<div class="col md-3 md--offset-6">
+								<span class="cloud cloud--extra-light"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="parallax__layer parallax__layer--back-3">
+			
+					<div class="row row--full-height items-end">
+						<div class="col md-6 md--offset-3">
+								<span class="cloud cloud--light"></span>
+						</div>
+						<div class="col md-3 md--offset-6">
+								<span class="cloud cloud--light"></span>
+						</div>
+						<div class="col md-4 md--offset-4">
+								<span class="cloud cloud--light"></span>
+						</div>
+						<div class="col md-6 md--offset-6 text-center">
+								<span class="cloud cloud--light"></span>
+						</div>
+					</div>
+				
+			</div>
+			<div class="parallax__layer parallax__layer--back-6">
+				<div class="container-fluid">
+					<div class="row row--full-height items-center">
+						<div class="col md-3 md--offset-1">
+							<span class="cloud cloud--mid"></span>
+						</div>
+						<div class="col md-4 md--offset-2">
+							<span class="cloud cloud--heavy"></span>
+						</div>
+						
+						<div class="col md-3 md--offset-4">
+							<span class="cloud cloud--mid"></span>
+						</div>
+						<div class="col md-4 md--offset-0">
+							
+						</div>
+						
+						<div class="col md-3 md--offset-2">
+							<span class="cloud cloud--heavy"></span>
+						</div>
+						<div class="col md-4 md--offset-3">
+							<span class="cloud cloud--mid"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /PARALLAX -->
+		<!-- PARALLAX -->
+		<div class="outer parallax parallax--full-screen sky-scene">
+			<div class="parallax__layer parallax__layer--base">
+				<div class="container">
+					<div class="row row--full-height items-center">
+						<div class="col md-6 md--offset-3">
+							<h2>А на мобильниках на чистом! :)</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="parallax__layer parallax__layer--back">
+				<div class="container-fluid">
+					<div class="row row--full-height items-start">
+						<div class="col md-3 md--offset-2">
+								<span class="cloud cloud--extra-light"></span>
+						</div>
+						<div class="col md-4 md--offset-8">
+								<span class="cloud cloud--extra-light"></span>
+						</div>
+						<div class="col md-3 md--offset-9">
+								<span class="cloud cloud--extra-light"></span>
+						</div>
+						<div class="col md-3 md--offset-6">
+								<span class="cloud cloud--extra-light"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="parallax__layer parallax__layer--back-3">
+			
+					<div class="row row--full-height items-end">
+						<div class="col md-6 md--offset-3">
+								<span class="cloud cloud--light"></span>
+						</div>
+						<div class="col md-3 md--offset-6">
+								<span class="cloud cloud--light"></span>
+						</div>
+						<div class="col md-4 md--offset-4">
+								<span class="cloud cloud--light"></span>
+						</div>
+						<div class="col md-6 md--offset-6 text-center">
+								<span class="cloud cloud--light"></span>
+						</div>
+					</div>
+				
+			</div>
+			<div class="parallax__layer parallax__layer--back-6">
+				<div class="container-fluid">
+					<div class="row row--full-height items-center">
+						<div class="col md-3 md--offset-4">
+							<div class="whale-wrapper">
+									<div class="whale-body">
+										<div class="whale-eye"></div>
+									</div>
+									<div class="whale-tail"></div>
+								</div>
+							
+						</div>
+						<div class="col md-4 md--offset-2">
+							<span class="cloud cloud--heavy"></span>
+						</div>
+						
+						<div class="col md-3 md--offset-4">
+							<span class="cloud cloud--mid md--offset-12"></span>
+						</div>
+						<div class="col md-4 md--offset-0">
+							
+						</div>
+						
+						<div class="col md-3 md--offset-2">
+							<span class="cloud cloud--heavy"></span>
+						</div>
+						<div class="col md-4 md--offset-3">
+							<span class="cloud cloud--mid"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /PARALLAX -->
+		<div class="outer outer--stressed">
+			<div class="container">
+				<div class="row">
+					<div class="col md-8 md--offset-2">
+						<h2 data-framy="popover" data-content="Да, никакого JS!" data-position="top">Динамические подсказки на чистом css</h2>
+						<p>Конечно, если что, Framy поддерживает и JavaScript-версию подсказок, это можно включить отдельно!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="outer">
+			<div class="container">
+				<div class="row">
+					<div class="col md-12">
+						<h2 class="text-center">Элементы пользовательского интерфейса</h2>
+						<h3>Кнопки</h3>
+					</div>
+					<div class="col md-12">
+						<div class="row">
+							<div class="col md-6">
+								Стандартная кнопка <pre>&lt;span class=&quot;btn&quot;&gt;&lt;/span&gt;</pre>
+							</div>
+							<div class="col md-6 text-center">
+								<span class="btn">Кнопка</span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col md-6">
+								Заблокированная кнопка <pre>&lt;span class=&quot;btn btn--disabled&quot;&gt;&lt;/span&gt;</pre>
+							</div>
+							<div class="col md-6 text-center">
+								<span class="btn btn--disabled">Кнопка</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="outer outer--stressed">
+			<div class="container">
+				<div class="row">
+					<div class="col md-12">
+						<h3>Кнопки разных размеров</h3>
+					</div>
+					<div class="col md-6">
+						<div class="row">
+							<div class="col md-6">
+								<pre>.btn-xs</pre>		
+							</div>
+							<div class="col md-6">
+								<span class="btn btn-xs">Кнопка XS</span>
+							</div>
+						</div>
+					</div>
+					<div class="col md-6">
+						<div class="row">
+							<div class="col md-6">
+								<pre>.btn-sm</pre>
+							</div>
+							<div class="col md-6">
+								<span class="btn btn-sm">Кнопка SM</span>
+							</div>
+						</div>
+					</div>
+					<div class="col md-6">
+						<div class="row">
+							<div class="col md-6">
+								<pre>.btn-md</pre>
+							</div>
+							<div class="col md-6">
+								<span class="btn btn-md">Кнопка MD</span>
+							</div>
+						</div>
+					</div>
+					<div class="col md-6">
+						<div class="row">
+							<div class="col md-6">
+								<pre>.btn-lg</pre>
+							</div>
+							<div class="col md-6">
+								<span class="btn btn-lg">Кнопка LG</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="outer">
+			<div class="container">
+				<div class="row">
+					<div class="col md-12">
+						<h3>Альтернативные варианты</h3>
+					</div>
+					<div class="col md-6">
+						<div class="row">
+							<div class="col md-6">
+								<pre>.btn-o</pre>
+							</div>
+							<div class="col md-6">
+								<span class="btn btn-o">Кнопка.btn-o</span>
+							</div>
+						</div>
+					</div>
+					<div class="col md-6">
+						<div class="row">
+							<div class="col md-6">
+								<pre>.btn-o.btn--disabled</pre>
+							</div>
+							<div class="col md-6">
+								<span class="btn btn-o btn--disabled">Кнопка.btn-o</span>
+							</div>
+						</div>
+					</div>
+					<div class="col md-12">
+						<h3>Цветовые модификаторы</h3>
+					</div>
+					<div class="col md-6">
+						<div class="row">
+							<div class="col md-6">
+								<p>Для обычных кнопок  применяются модификаторы заднего фона:</p>
+								<pre>.btn.btn--danger-color-bg</pre>
+							</div>
+							<div class="col md-6 self-center">
+								<span class="btn btn--danger-color-bg">Кнопка</span>
+							</div>
+						</div>
+					</div>
+					<div class="col md-6">
+						<div class="row">
+							<div class="col md-6">
+								<p>Для прозрачных кнопок  применяются цветовые модификаторы границ:</p>
+								<br>
+								<pre>.btn-o.btn--danger-color-br</pre>
+							</div>
+							<div class="col md-6 self-center">
+								<span class="btn btn-o btn btn--danger-color-br">Кнопка.btn-o</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="outer outer--stressed">
+			<div class="container">
+				<div class="row items-center">	
+					<div class="col md-12">
+						<h3>Переключатели</h3>
+					</div>
+					<div class="col md-3">
+								<p>Стандартная форма</p>
+								<pre>.checkbox-toggler</pre>
+					</div>
+					<div class="col md-3 text-center">
+						<input class="checkbox-toggler" name="toggler" id="toggler_1" type="checkbox"><label for="toggler_1"></label>	
+					</div>								
+					<div class="col md-3">
+						<p>Квадратная</p>
+						<pre>.checkbox-toggler--squared</pre>
+					</div>
+					<div class="col md-3 text-center">
+						<input class="checkbox-toggler checkbox-toggler--squared" name="toggler" id="toggler_2" type="checkbox">
+						<label for="toggler_2"></label>
+					</div>
+					
+					<div class="col md-3">
+						<p>Стандартная с цветом</p>
+						<pre>.checkbox-toggler--colored</pre>
+					</div>
+					<div class="col md-3 text-center">
+						<input class="checkbox-toggler checkbox-toggler--colored" name="toggler" id="toggler_3" type="checkbox"><label for="toggler_3"></label>	
+						
+					</div>
+					
+					<div class="col md-3">
+						<p>Квадратная с цветом</p>
+						<pre>.checkbox-toggler--squared<br>.checkbox-toggler--colored</pre>
+					</div>
+					<div class="col md-3 text-center">
+						<input class="checkbox-toggler checkbox-toggler--squared checkbox-toggler--colored" name="toggler" id="toggler_4" type="checkbox">
+				<label for="toggler_4"></label>
+					</div>
+
+					<div class="col md-3">
+						<p>Заблокированные</p>
+						<pre>.checkbox-toggler:disabled</pre>
+					</div>
+					<div class="col md-3 text-center">
+						<input class="checkbox-toggler" disabled="disabled" name="toggler" id="toggler_5" type="checkbox"><label for="toggler_5"></label>	
+					</div>								
+					<div class="col md-3 md--offset-3 text-center">
+						<input class="checkbox-toggler checkbox-toggler--squared" disabled="disabled" name="toggler" id="toggler_6" type="checkbox">
+						<label for="toggler_6"></label>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+		<div class="outer">
+			<div class="container">
+				<div class="row items-center">
+					<div class="col md-12">
+						<h3>Классические чекбоксы</h3>
+					</div>
+					<div class="col md-3">
+						Чекбоксы по умолчанию с галочкой
+						<pre>.checkbox</pre>
+					</div>
+					<div class="col md-3 self-end">
+						<input class="checkbox" checked="checked" id="test_checkbox_1" type="checkbox"><label for="test_checkbox_1">Адаптивность</label><br>
+						<input class="checkbox" checked="checked" id="test_checkbox_2" type="checkbox"><label for="test_checkbox_2">Валидность</label>
+					</div>
+					<div class="col md-3">
+						Чекбоксы c квадратными маркерами
+						<pre>.checkbox--squared</pre>
+					</div>
+					<div class="col md-3 self-end">
+						<input class="checkbox checkbox--squared" checked="checked" id="test_checkbox_3" type="checkbox"><label for="test_checkbox_3">Адаптивность</label><br>
+						<input class="checkbox checkbox--squared" checked="checked" id="test_checkbox_4" type="checkbox"><label for="test_checkbox_4">Валидность</label>
+					</div>
+					<div class="col md-12">
+						<h3>Радиокнопки</h3>
+					</div>
+					<div class="col md-3">
+						<pre>.radio</pre>
+					</div>
+					<div class="col md-3 self-end">
+						<input class="radio" id="test_radio_1" type="radio" name="radio_test" checked="checked">
+						<label for="test_radio_1">Адаптивность</label><br>
+						<input class="radio" id="test_radio_2" type="radio" name="radio_test">
+						<label for="test_radio_2">Фиксированный</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col md-6">
+						<h3>Радио-переключатели</h3>
+						<pre>.radio-toggler-wrapper > .radio-toggler</pre>
+						<div class="radio-toggler-wrapper">
+							<input class="radio-toggler" id="test_radio_3" type="radio" name="radio_test_2" checked="checked">
+							<label for="test_radio_3">Адаптивность</label>
+							<input class="radio-toggler" id="test_radio_4" type="radio" name="radio_test_2">
+							<label for="test_radio_4">Резиновый</label>
+							<input class="radio-toggler" id="test_radio_5" type="radio" name="radio_test_2">
+							<label for="test_radio_5">Фиксированный</label>
+						</div>
+					</div>
+					<div class="col md-6 self-end">
+						<p>Заблокированный</p>
+						<pre>.radio-toggler-wrapper > .radio-toggler:disabled</pre>
+						<div class="radio-toggler-wrapper">
+							<input class="radio-toggler" id="test_radio_6" type="radio" name="radio_test_3" checked="checked">
+							<label for="test_radio_6">Адаптивность</label>
+							<input class="radio-toggler" id="test_radio_7" type="radio" name="radio_test_3">
+							<label for="test_radio_7">Резиновый</label>
+							<input disabled="disabled" class="radio-toggler" id="test_radio_9" type="radio" name="radio_test_3">
+							<label for="test_radio_9">Отзывчивый</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="outer outer--stressed">
+			<div class="container">
+				<div class="row">
+					<div class="col md-12">
+						<h2>Формы</h2>
+					</div>
+					<div class="col md-3">
+						<h3>Текстовое поле</h3>
+						<pre>.textfield</pre>
+					</div>
+					<div class="col md-3 self-end">
+						<label for="test_text_1">Ваше имя</label>
+						<input id="test_text_1" type="text" class="textfield">
+					</div>
+					<div class="col md-6 self-end">
+						<pre>.textfield--inline</pre>
+						<div class="text-right">
+							<label for="test_text_2">Ваше имя</label>
+							<input id="test_text_2" type="text" class="textfield textfield--inline">
+						</div>
+					</div>
+					<div class="col md-3">
+						<h3>Модификаторы валидации</h3>
+						<pre>.textfield--success</pre>
+					</div>
+					<div class="col md-3 self-end">
+						<label for="test_text_3">Ваше имя</label>
+						<input id="test_text_3" type="text" class="textfield textfield--success" value="Дарт Вейдер">
+					</div>
+					<div class="col md-3 self-end">
+						<pre>.textfield--error</pre>
+					</div>
+					<div class="col md-3 self-end">
+						<label for="test_text_4">Ваше имя</label>
+						<input id="test_text_4" type="text" class="textfield textfield--error" value="R2D2">
+					</div>
+					<div class="col md-3">
+						<h3>Модификаторы размеров</h3>
+						<code>.textfield-xs</code>
+						<input type="text" class="textfield textfield-xs">
+						<code>.textfield-sm</code>
+						<input type="text" class="textfield textfield-sm">
+						<code>.textfield-md</code>
+						<input type="text" class="textfield textfield-md">
+						<code>.textfield-lg</code>
+						<input type="text" class="textfield textfield-lg">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="outer">
+			<div class="container">
+				<div class="row">
+					<div class="col md-12">
+						<h2>Табы</h2>
+					</div>
+					<div class="col md-8">
+						<h3>Стандартные табы</h3>
+						<pre>.tabs-wrapper<br>&nbsp;&nbsp;&nbsp;&nbsp;nav.tabs-header<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ul ... <br>&nbsp;&nbsp;&nbsp;&nbsp;.tabs-body<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.tabs-page ...</pre>
+						<div class="tabs-wrapper">
+							<nav class="tabs-header">
+								<ul>
+									<li><a class="tab--active" href="#tab1">Tab 1</a></li>
+									<li><a href="#tab2">Tab 2</a></li>
+									<li><a href="#tab3">Tab 3</a></li>
+									<li><a href="#tab4">Tab 4</a></li>
+								</ul>
+							</nav>
+							<div class="tabs-body">
+								<div id="tab1" class="tabs-page tabs-page--open">
+									<p>Tab 1 Text</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								</div>
+								<div id="tab2" class="tabs-page">
+									<p>Tab 2 Text</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								</div>
+								<div id="tab3" class="tabs-page">
+									<p>Tab 3 Text</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								</div>
+								<div id="tab4" class="tabs-page">
+									<p>Tab 4 Text</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col md-4">
+						<h3>Модификаторы шапки</h3>
+						<pre>.tabs-header--squared</pre>
+						<nav class="tabs-header tabs-header--squared">
+							<ul>
+								<li><a class="tab--active" href="#tab10">Tab 1</a></li>
+								<li><a href="#tab20">Tab 2</a></li>
+								<li><a href="#tab30">Tab 3</a></li>
+								<li><a href="#tab40">Tab 4</a></li>
+							</ul>
+						</nav>
+						<pre>.tabs-header--rounded</pre>
+						<nav class="tabs-header tabs-header--rounded">
+							<ul>
+								<li><a class="tab--active" href="#tab10">Tab 1</a></li>
+								<li><a href="#tab20">Tab 2</a></li>
+								<li><a href="#tab30">Tab 3</a></li>
+								<li><a href="#tab40">Tab 4</a></li>
+							</ul>
+						</nav>
+						<pre>.tabs-header--no-margin</pre>
+						<nav class="tabs-header tabs-header--rounded tabs-header--no-margin">
+							<ul>
+								<li><a class="tab--active" href="#tab10">Tab 1</a></li>
+								<li><a href="#tab20">Tab 2</a></li>
+								<li><a href="#tab30">Tab 3</a></li>
+								<li><a href="#tab40">Tab 4</a></li>
+							</ul>
+						</nav>
+						<pre>.tabs-header--togglered</pre>
+						<nav class="tabs-header tabs-header--togglered">
+							<ul>
+								<li><a class="tab--active" href="#tab10">Tab 1</a></li>
+								<li><a href="#tab20">Tab 2</a></li>
+								<li><a href="#tab30">Tab 3</a></li>
+								<li><a href="#tab40">Tab 4</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col md-8">
+						<h3>Дополнительные модификаторы</h3>
+						<p>Модификаторы выравнивания</p>
+						<pre>.nav--center</pre>
+						<nav class="tabs-header nav--center">
+							<ul>
+								<li><a class="tab--active" href="#tab10">Tab 1</a></li>
+								<li><a href="#tab20">Tab 2</a></li>
+								<li><a href="#tab30">Tab 3</a></li>
+								<li><a href="#tab40">Tab 4</a></li>
+							</ul>
+						</nav>
+						<pre>.nav--end</pre>
+						<nav class="tabs-header nav--end">
+							<ul>
+								<li><a class="tab--active" href="#tab10">Tab 1</a></li>
+								<li><a href="#tab20">Tab 2</a></li>
+								<li><a href="#tab30">Tab 3</a></li>
+								<li><a href="#tab40">Tab 4</a></li>
+							</ul>
+						</nav>
+						<p>Модификаторы заднего фона</p>
+						<pre>.nav--filled</pre>
+						<nav class="tabs-header nav--filled">
+							<ul>
+								<li><a class="tab--active" href="#tab10">Tab 1</a></li>
+								<li><a href="#tab20">Tab 2</a></li>
+								<li><a href="#tab30">Tab 3</a></li>
+								<li><a href="#tab40">Tab 4</a></li>
+							</ul>
+						</nav>
+						<pre>.nav--filled.tabs-header--no-margin</pre>
+						<nav class="tabs-header nav--filled tabs-header--no-margin">
+							<ul>
+								<li><a class="tab--active" href="#tab10">Tab 1</a></li>
+								<li><a href="#tab20">Tab 2</a></li>
+								<li><a href="#tab30">Tab 3</a></li>
+								<li><a href="#tab40">Tab 4</a></li>
+							</ul>
+						</nav>
+						<pre>.nav--filled.tabs-header--squared</pre>
+						<nav class="tabs-header nav--filled tabs-header--squared">
+							<ul>
+								<li><a class="tab--active" href="#tab10">Tab 1</a></li>
+								<li><a href="#tab20">Tab 2</a></li>
+								<li><a href="#tab30">Tab 3</a></li>
+								<li><a href="#tab40">Tab 4</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- TEST MODALS -->
+			<div id="testModal" class="modal-wrapper">
+				<div class="modal-header modal-header--main-color-bg">
+					<h4 class="modal-title">Заголовок модали</h4>
+					<span class="modal-closer">&times;</span>
+				</div>
+				<div class="modal-body">
+					<p>Это тестовая модаль!</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				<div class="modal-footer text-right">
+					<span data-framy="modal-close" class="btn btn-o btn-sm">Закрыть</span>
+				</div>
+			</div>
+			<div id="testModalXS" class="modal-wrapper modal-xs">
+				<div class="modal-header modal-header--main-color-bg">
+					<h4 class="modal-title">Заголовок модали</h4>
+					<span class="modal-closer">&times;</span>
+				</div>
+				<div class="modal-body">
+					<p>Это тестовая модаль!</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				<div class="modal-footer text-right">
+					<span data-framy="modal-close" class="btn btn-o btn-sm">Закрыть</span>
+				</div>
+			</div>
+			<div id="testModalSM" class="modal-wrapper modal-sm">
+				<div class="modal-header modal-header--main-color-bg">
+					<h4 class="modal-title">Заголовок модали</h4>
+					<span class="modal-closer">&times;</span>
+				</div>
+				<div class="modal-body">
+					<p>Это тестовая модаль!</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				<div class="modal-footer text-right">
+					<span data-framy="modal-close" class="btn btn-o btn-sm">Закрыть</span>
+				</div>
+			</div>
+			<div id="testModalMD" class="modal-wrapper modal-md">
+				<div class="modal-header modal-header--main-color-bg">
+					<h4 class="modal-title">Заголовок модали</h4>
+					<span class="modal-closer">&times;</span>
+				</div>
+				<div class="modal-body">
+					<p>Это тестовая модаль!</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				<div class="modal-footer text-right">
+					<span data-framy="modal-close" class="btn btn-o btn-sm">Закрыть</span>
+				</div>
+			</div>
+			<div id="testModalLG" class="modal-wrapper modal-lg">
+				<div class="modal-header modal-header--main-color-bg">
+					<h4 class="modal-title">Заголовок модали</h4>
+					<span class="modal-closer">&times;</span>
+				</div>
+				<div class="modal-body">
+					<p>Это тестовая модаль!</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				<div class="modal-footer text-right">
+					<span data-framy="modal-close" class="btn btn-o btn-sm">Закрыть</span>
+				</div>
+			</div>
+		<!-- /TEST MODALS -->
+		<div class="outer">
+			<div class="container">
+				<div class="row">
+					<div class="col md-12">
+						<h2>Типографика</h2>
+						<p>Framy предоставляет также стандартные элементы и классы-модификаторы для работы с текстом</p>
+						<h1>Заголовок первого уровня</h1>
+						<h2>Заголовок второго уровня</h2>
+						<h3>Заголовок третьего уровня</h3>
+						<h4>Заголовок четвертого уровня</h4>
+						<h5>Заголовок пятого уровня</h5>
+						<h6>Заголовок шестого уровня</h6>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col md-3">
+						<h3>Списки</h3>
+						<ul class="list--dotted">
+							<li>Морковь</li>
+							<li>Лук</li>
+							<li>Помидоры</li>
+							<li>Огурцы</li>
+						</ul>
+					</div>
+					<div class="col md-3 self-end">
+						<ul class="list--circled">
+							<li>Морковь</li>
+							<li>Лук</li>
+							<li>Помидоры</li>
+							<li>Огурцы</li>
+						</ul>
+					</div>
+					<div class="col md-3 self-end">
+						<ul class="list--squared">
+							<li>Морковь</li>
+							<li>Лук</li>
+							<li>Помидоры</li>
+							<li>Огурцы</li>
+						</ul>
+					</div>
+					<div class="col md-3 self-end">
+						<ul class="list--rhombused">
+							<li>Морковь</li>
+							<li>Лук</li>
+							<li>Помидоры</li>
+							<li>Огурцы</li>
+						</ul>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col md-3 self-end">
+						<ul class="list--rhombused-o">
+							<li>Морковь</li>
+							<li>Лук</li>
+							<li>Помидоры</li>
+							<li>Огурцы</li>
+						</ul>
+					</div>
+					<div class="col md-3 self-end">
+						<ul class="list--squared-o">
+							<li>Морковь</li>
+							<li>Лук</li>
+							<li>Помидоры</li>
+							<li>Огурцы</li>
+						</ul>
+					</div>
+					<div class="col md-3 self-end">
+						<ul class="list--arrowed">
+							<li>Морковь</li>
+							<li>Лук</li>
+							<li>Помидоры</li>
+							<li>Огурцы</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
