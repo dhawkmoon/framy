@@ -22,7 +22,7 @@
 			}
 		}
 		$(window).on('scroll', run);
-
+		$(window).on('resize', run);
 	}
 	
 })(jQuery)
