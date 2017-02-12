@@ -2,6 +2,7 @@
  * Tabs
  */
 .tabs-header{
+	@extend .nav;
 	ul{
 		flex-wrap: wrap;
 	}
@@ -19,33 +20,33 @@
 	display: block;
 }
 .tabs-header--squared,
-.tabs-header--rounded{
+.tabs-header--rounded {
 	border-bottom: 1px solid #ddd;
 }
-.tabs-header--squared a,
-.tabs-header--rounded a{
+.tabs-header--squared > ul > li > a,
+.tabs-header--rounded > ul > li > a{
 	border: 1px solid #ddd;
 	border-bottom: none;
 }
-.tabs-header--rounded a{
+.tabs-header--rounded a {
 	border-radius: 5px 5px 0 0;
 }
-.tabs-header--squared a:hover,
-.tabs-header--squared a:active,
-.tabs-header--squared a.tab--active,
-.tabs-header--rounded a:hover,
-.tabs-header--rounded a:active,
-.tabs-header--rounded a.tab--active,
-.tabs-header--togglered a:active,
-.tabs-header--togglered a.tab--active
+.tabs-header--squared > ul > li > a:hover,
+.tabs-header--squared > ul > li > a:active,
+.tabs-header--squared > ul > li > a.tab--active,
+.tabs-header--rounded > ul > li > a:hover,
+.tabs-header--rounded > ul > li > a:active,
+.tabs-header--rounded > ul > li > a.tab--active,
+.tabs-header--togglered > ul > li > a:active,
+.tabs-header--togglered > ul > li >  a.tab--active
 {
 	background-color: $main-color;
-	color:white;
+	color: white;
 }
-.tabs-header--no-margin a{
+.tabs-header--no-margin > ul > li > a{
 	margin:0;
 }
-.tabs-header--togglered a{
+.tabs-header--togglered > ul > li > a{
 	border: 1px solid #ddd;
 	background-color: #fafafa;
 	border-right: none;

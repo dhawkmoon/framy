@@ -1,0 +1,37 @@
+/*
+ * FRAMY
+ */
+@import 'basic/_normalize.scss';
+@import 'basic/_global-vars.scss';
+@import 'basic/_global-mixins.scss';
+@import 'basic/_typo.scss';
+@import 'basic/_grid.scss';
+@import 'basic/_animations.scss'; 
+@import 'basic/_lists.scss';
+@import 'basic/_tables.scss'; 
+@import 'basic/_navs.scss';
+@import 'basic/_buttons.scss';
+@import 'basic/_cards.scss';
+@import 'basic/_modals.scss';
+@import 'basic/_forms.scss';
+@import 'basic/_tabs.scss';
+@import 'basic/_popovers.scss'; 
+@import 'basic/_parallax.scss';
+@import 'basic/_images.scss'; 
+@import 'basic/_colors.scss'; 
+
+.framy-logo {
+	display: inline-block;
+	background-image: url(../img/logo.svg);
+	width: 75px;
+	height: 87px;
+	background-size: cover;
+	margin-top: 15px;
+}
+
+.row--example {
+	margin-bottom: 15px;
+	.col {
+		background-clip: content-box
+	}
+}

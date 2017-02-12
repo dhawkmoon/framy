@@ -1,7 +1,35 @@
 {
   "name": "framy",
-  "version": "0.5.0",
+  "version": "0.2.0-dev",
+  "description": "Modern CSS 3 framework",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhawkmoon/framy.git"
+  },
+  "keywords": [
+    "css3",
+    "framework",
+    "flexbox",
+    "websites",
+    "web",
+    "development"
+  ],
+  "author": "dhawkmoon",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/dhawkmoon/framy/issues"
+  },
+  "homepage": "https://github.com/dhawkmoon/framy#readme",
   "devDependencies": {
-    "grunt": "~0.4.1"
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^2.0.0-rc.3",
+    "sass-loader": "^5.0.1",
+    "svg-url-loader": "^2.0.1",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.3.0"
   }
 }

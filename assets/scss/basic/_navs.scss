@@ -24,8 +24,8 @@
 .nav > ul > li > a:hover,
 .nav > ul > li > a:active,
 .nav > ul > li > a.tab--active{
-	color:#0cad62;
-	border-color:#0cad62; 
+	color:$main-color;
+	border-color:$main-color; 
 }
 
 .nav--center ul{
@@ -62,7 +62,7 @@
 	color: black; 
 }
 .nav > ul ul a:hover{
-	background-color: #0cad62;
+	background-color: $main-color;
 	color:white;
 }
 .nav li:hover > ul{
@@ -78,7 +78,7 @@
 	display: inline-block;
 	width: .4em;
 	height: .4em;
-	border:1px solid #0cad62;
+	border:1px solid $main-color;
 	margin-left: 1em;
 	top: -0.3em;
 	background-color: transparent;
